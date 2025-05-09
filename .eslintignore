@@ -1,0 +1,11 @@
+# Ignore specific files with lint issues
+components/workflow-builder/node-connection.tsx
+
+# Build directories
+.next/
+out/
+build/
+dist/
+
+# Node modules
+node_modules/

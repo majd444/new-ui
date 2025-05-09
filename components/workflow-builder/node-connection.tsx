@@ -7,14 +7,14 @@ interface NodeConnectionProps {
   sourcePosition: { x: number; y: number };
   targetPosition: { x: number; y: number };
   sourceType: NodeType;
-  targetType: NodeType; // Keeping in interface but not using in implementation
+  targetType: NodeType; // Keep this in the interface for type safety
 }
 
 export function NodeConnection({
   sourcePosition,
   targetPosition,
   sourceType,
-  targetType // Not using this parameter but keeping it in the interface
+  targetType: _targetType // Rename to _targetType in the destructuring to indicate it's unused
 }: NodeConnectionProps) {
   // Calculate the path for the curved line
   const sourceX = sourcePosition.x + 250; // Add node width
